@@ -3,8 +3,9 @@
      <img src="https://github.com/user-attachments/assets/ad0eb4e7-7103-415d-96b9-2b1052edd6f5" height=90px width=90px/>
      <br/>
      <br/>
-     <img alt="Static Badge" src="https://img.shields.io/badge/Python-7F00FF?style=for-the-badge">
-     <img alt="Static Badge" src="https://img.shields.io/badge/GUI%20Application-red?style=for-the-badge">
+     <img alt="Static Badge" src="https://img.shields.io/badge/Python-red?style=for-the-badge&logo=python&logoColor=white">
+     <img alt="Static Badge" src="https://img.shields.io/badge/Tkinter-darkblue?style=for-the-badge">
+     <img alt="Static Badge" src="https://img.shields.io/badge/GUI%20Application-darkgreen?style=for-the-badge">
      <br/>
      <br/>
      <!-- Open Source -->
@@ -59,6 +60,7 @@
 
 
 ## Screenshot 🖼️
+![image](https://github.com/user-attachments/assets/eb725478-8878-408d-bd52-3c01cf660a6c)
 
 
 
