@@ -55,13 +55,6 @@ class Register:
         self.turn = 1
         self.is_cancelled = True
         
-        # ----------------- User Frame -------------------
-        
-        # self.top_frame = Frame(self.window, bg="#ffffff")
-        # self.top_frame.pack()
-        
-        
-        
         
         # ------------ Frame ------------ #
         

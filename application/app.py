@@ -7,6 +7,7 @@ from PIL import Image, ImageTk
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure, OperationFailure
 
+
 class PDF(FPDF):
     def header(self):
         self.set_font('helvetica', 'B', 15)
@@ -21,7 +22,7 @@ class PDF(FPDF):
 class BillGeneratorApp:
     def __init__(self, master, mongo_uri, db_name, collection_name, name):
         self.master = master
-        self.master.title("Bill Generator App")
+        self.master.title("Bill Master")
         self.master.geometry("800x600")
         
         current_dir = os.getcwd()
@@ -34,7 +35,7 @@ class BillGeneratorApp:
         
         try:
             self.client = MongoClient(mongo_uri)
-            self.client.server_info()  # This will raise an exception if connection fails
+            self.client.server_info()  # This to raise an exception if connection fails die to Invalid URI
             self.db = self.client[db_name]
             self.collection = self.db[collection_name]
         except (ConnectionFailure, OperationFailure) as e:
@@ -225,7 +226,7 @@ class BillGeneratorApp:
         try:
             # Insert the bill into MongoDB
             result = self.collection.insert_one(bill)
-            bill['_id'] = result.inserted_id  # Add the MongoDB-generated ID to the bill
+            bill['_id'] = result.inserted_id  # MongoDB-generated ID to the bill
             self.bills.append(bill)
             messagebox.showinfo("Success", "Bill saved successfully!")
             self.create_main_page()
@@ -283,14 +284,3 @@ class BillGeneratorApp:
             print(f"Error loading bills: {e}")
             self.bills = []
             messagebox.showwarning("Data Loading Error", "Failed to load existing bills. You can still create new bills.")
-
-# Usage example (commented out for your reference)
-# if __name__ == "__main__":
-#     mongo_uri = "your_mongodb_uri_here"
-#     db_name = "bill_data"
-#     collection_name = "bills"
-#     name = "John Doe"
-#
-#     window = tk.Tk()
-#     main_app = BillGeneratorApp(window, mongo_uri, db_name, collection_name, name)
-#     window.mainloop()

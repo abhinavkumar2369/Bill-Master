@@ -1,11 +1,9 @@
 from tkinter import *
 from tkinter import ttk , messagebox
 import os
-# import pickle
 from PIL import Image, ImageTk
 from pymongo import MongoClient
 import bcrypt
-
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
@@ -18,12 +16,6 @@ try:
 except:
     pass
 
-# # Added for testing
-# current_dir = os.getcwd()
-# file_path = os.path.join(current_dir, 'data/credential.dat')
-# file = open(file_path,"wb")
-# file.write(pickle.dumps({"username":"admin","password":"admin"}))
-# file.close()
 
 
 class Login:
@@ -54,8 +46,6 @@ class Login:
         logo = PhotoImage(file=os.path.join(current_dir,'images/application_logo.png'))
         self.window.iconphoto(False, logo)
 
-        # Set the logo as the application icon
-        # self.window.iconphoto(False, logo)
         
         # --------- Login Label --------- #
         self.label = Label(self.window, text="Sign In", font=("Arial", 36,"bold"),fg="red",bg="#e0ffe6",pady=15)
@@ -155,49 +145,5 @@ class Login:
     def register(self):
         self.turn = 1
         self.is_cancelled = False
-        # username = self.username.get()
-        # password = self.password.get()
-
-        # if not username or not password:
-        #     messagebox.showerror("Error", "Username and password are required")
-        #     return
-
-        # existing_user = self.users.find_one({"username": username})
-        # if existing_user:
-        #     messagebox.showerror("Error", "Username already exists")
-        #     return
-
-        # new_user = {
-        #     "username": username,
-        #     "password": password
-        # }
-        # self.users.insert_one(new_user)
-        # user = self.users.find_one(new_user)
-        # messagebox.showinfo("Success", "Account created successfully!")
-        # self.user_id = user["_id"]
-        # self.username_value = user["username"]
         
         self.window.destroy()
-        # return user_id
-
-    
-    # def change_window(self):
-    #     global current_window_name
-    
-    #     if current_window_name == "login":
-    #         current_window_name = "register"
-    #         self.window.title("Sign Up - Bill Master")
-    #         self.label.config(text="Create an Account")
-    #         self.register_label.config(text="Already have an account?")
-    #         self.change_button.config(text="Sign In", command=self.change_window)
-    #         self.action_button.config(text="Register", command=self.register)
-    
-    #     else:
-    #         current_window_name = "login"
-    #         self.window.title("Login - Bill Master")
-    #         self.label.config(text="LOGIN")
-    #         self.register_label.config(text="Don't have an account?")
-    #         self.change_button.config(text="Sign Up", command=self.change_window)
-    #         self.action_button.config(text="Login", command=self.login)
-
-# Login().window.mainloop()
