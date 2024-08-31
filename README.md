@@ -81,6 +81,8 @@
 
 <br/>
 
+## Demonstration Video 📽️
+[![Watch the video](https://github.com/user-attachments/assets/aad55736-ef21-48d8-8640-522cae3c43ac)](https://github.com/user-attachments/assets/07201489-ef59-47a2-bbd5-42a5d9a895f9)
 
 
 
