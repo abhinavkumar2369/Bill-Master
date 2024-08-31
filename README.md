@@ -60,7 +60,27 @@
 
 
 ## Screenshot 🖼️
-![image](https://github.com/user-attachments/assets/eb725478-8878-408d-bd52-3c01cf660a6c)
+
+### ➡️ Login
+![Login](https://github.com/user-attachments/assets/83e6974c-c20c-4f19-9e8f-504dae4843d5)
+
+### ➡️ Register
+![Register](https://github.com/user-attachments/assets/92961f06-2891-498e-9aed-3d9bb882b31d)
+
+### ➡️ HomeScreen
+![HomeScreen](https://github.com/user-attachments/assets/07d70219-c92c-496d-b4ec-e02666d374c7)
+
+### ➡️ ViewBills
+![View Bills](https://github.com/user-attachments/assets/a7f9f55c-2335-4568-aa85-a1332d7c6a00)
+
+### ➡️ Bill PDF (For PrintOut)
+![image](https://github.com/user-attachments/assets/b1a5f695-1106-4293-bd07-3253e8518e56)
+
+### ➡️ MongoDb Integration
+![Mongo Db ](https://github.com/user-attachments/assets/47cdf9c8-43ae-43da-b7c6-0432a019474f)
+
+<br/>
+
 
 
 
