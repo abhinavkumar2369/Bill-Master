@@ -3,8 +3,9 @@ from tkinter import ttk, messagebox
 from fpdf import FPDF
 import datetime
 import os
-import json
-
+from PIL import Image, ImageTk
+from pymongo import MongoClient
+from pymongo.errors import ConnectionFailure, OperationFailure
 
 class PDF(FPDF):
     def header(self):
@@ -18,13 +19,30 @@ class PDF(FPDF):
         self.cell(0, 10, f'Page {self.page_no()}/{{nb}}', 0, 0, 'C')
 
 class BillGeneratorApp:
-    def __init__(self, master,filename):
+    def __init__(self, master, mongo_uri, db_name, collection_name, name):
         self.master = master
         self.master.title("Bill Generator App")
         self.master.geometry("800x600")
+        
+        current_dir = os.getcwd()
+        logo_path = os.path.join(current_dir, 'images/application_logo.png')
+        image = Image.open(logo_path)
+        logo = ImageTk.PhotoImage(image)
+        self.master.iconphoto(False, logo)
 
-        self.username = "Default User"
-        self.filename = filename
+        self.name = name
+        
+        try:
+            self.client = MongoClient(mongo_uri)
+            self.client.server_info()  # This will raise an exception if connection fails
+            self.db = self.client[db_name]
+            self.collection = self.db[collection_name]
+        except (ConnectionFailure, OperationFailure) as e:
+            print(f"Error connecting to MongoDB: {e}")
+            messagebox.showerror("Database Error", "Failed to connect to the database. Please check your connection and try again.")
+            self.master.destroy()
+            return
+
         self.bills = []
         self.load_bills()
 
@@ -33,7 +51,7 @@ class BillGeneratorApp:
     def create_main_page(self):
         self.clear_window()
 
-        ttk.Label(self.master, text=f"Welcome, {self.username}!", font=("Helvetica", 16)).pack(pady=10)
+        ttk.Label(self.master, text=f"Welcome, {self.name}!", font=("Helvetica", 16)).pack(pady=10)
 
         self.tree = ttk.Treeview(self.master, columns=("Date", "Customer", "Total"), show="headings")
         self.tree.heading("Date", text="Date")
@@ -204,10 +222,16 @@ class BillGeneratorApp:
             "total_sum": total_sum
         }
 
-        self.bills.append(bill)
-        self.save_bills()
-        messagebox.showinfo("Success", "Bill saved successfully!")
-        self.create_main_page()
+        try:
+            # Insert the bill into MongoDB
+            result = self.collection.insert_one(bill)
+            bill['_id'] = result.inserted_id  # Add the MongoDB-generated ID to the bill
+            self.bills.append(bill)
+            messagebox.showinfo("Success", "Bill saved successfully!")
+            self.create_main_page()
+        except Exception as e:
+            print(f"Error saving bill: {e}")
+            messagebox.showerror("Error", "Failed to save the bill. Please try again.")
 
     def generate_beautiful_pdf(self, customer_info, products, total_sum, filename='beautiful_bill.pdf'):
         pdf = PDF()
@@ -253,11 +277,20 @@ class BillGeneratorApp:
 
     def load_bills(self):
         try:
-            with open(self.filename, 'r') as f:
-                self.bills = json.load(f)
-        except FileNotFoundError:
+            cursor = self.collection.find()
+            self.bills = list(cursor)
+        except Exception as e:
+            print(f"Error loading bills: {e}")
             self.bills = []
+            messagebox.showwarning("Data Loading Error", "Failed to load existing bills. You can still create new bills.")
 
-    def save_bills(self):
-        with open(self.filename, 'w') as f:
-            json.dump(self.bills, f)
+# Usage example (commented out for your reference)
+# if __name__ == "__main__":
+#     mongo_uri = "your_mongodb_uri_here"
+#     db_name = "bill_data"
+#     collection_name = "bills"
+#     name = "John Doe"
+#
+#     window = tk.Tk()
+#     main_app = BillGeneratorApp(window, mongo_uri, db_name, collection_name, name)
+#     window.mainloop()
