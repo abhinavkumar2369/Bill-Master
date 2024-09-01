@@ -18,7 +18,7 @@ except:
 
 
 class Register:
-    def __init__(self):
+    def __init__(self,mongo_uri):
         
         # Current Directory
         current_dir = os.getcwd()
@@ -49,6 +49,7 @@ class Register:
         
         # -------------------------------------
         
+        self.uri = mongo_uri
         self.is_logged_in = False
         self.user_id = None
         self.name = None
@@ -145,7 +146,7 @@ class Register:
             
     def register(self):
         # MongoDB connection
-        uri = "mongodb+srv://dbLogin:6LE0L?9Ad=(|@usercredentials.dgn1y.mongodb.net/?retryWrites=true&w=majority&appName=UserCredentials"
+        uri = self.uri
         self.client = MongoClient(uri, server_api=ServerApi('1'))
         self.db = self.client["user_credentials"]
         self.users = self.db["auth"]

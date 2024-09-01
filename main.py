@@ -25,7 +25,7 @@ turn = 0
 
 while True:
     if turn == 0:
-        login = Login()
+        login = Login(mongo_uri)
         login.window.mainloop()
         turn = login.turn
         is_logged_in = login.is_logged_in
@@ -44,7 +44,7 @@ while True:
         break
     
     if turn == 1:
-        register = Register()
+        register = Register(mongo_uri)
         register.window.mainloop()
         turn = register.turn
         is_cancelled = register.is_cancelled

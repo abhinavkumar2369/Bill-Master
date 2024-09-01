@@ -19,7 +19,7 @@ except:
 
 
 class Login:
-    def __init__(self):
+    def __init__(self,mongo_uri):
         
         # Current Directory
         current_dir = os.getcwd()
@@ -120,7 +120,7 @@ class Login:
         self.register_button.grid(row=0,column=1)
 
         # MongoDB connection
-        uri = "mongodb+srv://dbLogin:6LE0L?9Ad=(|@usercredentials.dgn1y.mongodb.net/?retryWrites=true&w=majority&appName=UserCredentials"
+        uri = mongo_uri
         self.client = MongoClient(uri, server_api=ServerApi('1'))
         self.db = self.client["user_credentials"]
         self.users = self.db["auth"]
