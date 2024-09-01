@@ -41,13 +41,17 @@
      <img alt="GitHub Release" src="https://img.shields.io/github/v/release/abhinavkumar2369/Bill-Master">
 </div>
 
+
 <!------------------------------------------------->
+
 
 ## Overview 💫
 - Bill Master is a comprehensive billing application designed to streamline the billing process.
 - It features a user-friendly login interface and various functionalities to manage billing efficiently.
 
+
 <!------------------------------------------------->
+
 
 ## Features 🌟
 - User authentication (login/register)
@@ -56,7 +60,9 @@
 - PDF bill generation for printouts
 - MongoDB integration for data storage
 
+
 <!------------------------------------------------->
+
 
 ## Prerequisites 📋
 Before you begin, ensure you have met the following requirements:
@@ -64,7 +70,9 @@ Before you begin, ensure you have met the following requirements:
 - pip (Python package manager)
 - MongoDB (local installation or Atlas account)
 
+
 <!------------------------------------------------->
+
 
 ## Installation 🛠️
 
@@ -76,8 +84,9 @@ Before you begin, ensure you have met the following requirements:
      ```
 
 2. Install the required dependencies:
+
    ```sh
-   pip install pymongo pillow bcrypt
+   pip install pymongo pillow bcrypt fpdf Pillow
    ```
 
 <!------------------------------------------------->
@@ -114,7 +123,9 @@ Before you begin, ensure you have met the following requirements:
 
 
 ### Running the Application 🚀
+
 - Run the main application file:
+
      ```python
      python main.py
      ```
@@ -124,22 +135,22 @@ Before you begin, ensure you have met the following requirements:
 
 ## Screenshot 🖼️
 
-### ➡️ Login
+### ➡️ Login (For Existing User)
 ![Login](https://github.com/user-attachments/assets/83e6974c-c20c-4f19-9e8f-504dae4843d5)
 
-### ➡️ Register
+### ➡️ Register (For New User)
 ![Register](https://github.com/user-attachments/assets/92961f06-2891-498e-9aed-3d9bb882b31d)
 
 ### ➡️ HomeScreen
 ![HomeScreen](https://github.com/user-attachments/assets/07d70219-c92c-496d-b4ec-e02666d374c7)
 
-### ➡️ ViewBills
+### ➡️ View Bills
 ![View Bills](https://github.com/user-attachments/assets/a7f9f55c-2335-4568-aa85-a1332d7c6a00)
 
 ### ➡️ Bill PDF (For PrintOut)
 ![image](https://github.com/user-attachments/assets/b1a5f695-1106-4293-bd07-3253e8518e56)
 
-### ➡️ MongoDb Integration
+### ➡️ MongoDB Database Integration
 ![Mongo Db ](https://github.com/user-attachments/assets/47cdf9c8-43ae-43da-b7c6-0432a019474f)
 
 <br/>
@@ -148,20 +159,15 @@ Before you begin, ensure you have met the following requirements:
 [![Watch the video](https://github.com/user-attachments/assets/aad55736-ef21-48d8-8640-522cae3c43ac)](https://github.com/user-attachments/assets/07201489-ef59-47a2-bbd5-42a5d9a895f9)
 
 
-
 <!------------------------------------------------->
 
 
-
-## Contributions 🧑‍🤝‍🧑
-- We welcome contributions from the community!.
-
+## Contributions 🧑‍💻
+Contributions are welcome! Please feel free to submit issues and pull requests.
 
 
 <!------------------------------------------------->
-
 
 
 ## License 🪪
-- This project is licensed under the MIT License.
-- See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the [MIT License](LICENSE).
