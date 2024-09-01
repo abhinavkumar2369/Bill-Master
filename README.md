@@ -4,8 +4,8 @@
      <br/>
      <br/>
      <img alt="Static Badge" src="https://img.shields.io/badge/Python-red?style=for-the-badge&logo=python&logoColor=white">
-     <img alt="Static Badge" src="https://img.shields.io/badge/Tkinter-darkblue?style=for-the-badge">
-     <img alt="Static Badge" src="https://img.shields.io/badge/GUI%20Application-darkgreen?style=for-the-badge">
+     <img alt="Static Badge" src="https://img.shields.io/badge/Database-MongoDB-4DB33D?style=for-the-badge&logo=mongodb&logoColor=white">
+     <img alt="Static Badge" src="https://img.shields.io/badge/Tkinter-blue?style=for-the-badge&logo=python&logoColor=white">
      <br/>
      <br/>
      <!-- Open Source -->
@@ -164,6 +164,14 @@ Before you begin, ensure you have met the following requirements:
 
 ## Contributions 🧑‍💻
 Contributions are welcome! Please feel free to submit issues and pull requests.
+
+
+<!------------------------------------------------->
+
+
+## Credit 👍 
+Images used in project belong to the Websites --->
+- SVG Repo <a href="https://www.svgrepo.com/"> Website </a>
 
 
 <!------------------------------------------------->
