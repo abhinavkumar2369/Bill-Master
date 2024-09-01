@@ -41,22 +41,85 @@
      <img alt="GitHub Release" src="https://img.shields.io/github/v/release/abhinavkumar2369/Bill-Master">
 </div>
 
-
-
-
 <!------------------------------------------------->
 
-
-
 ## Overview 💫
-
 - Bill Master is a comprehensive billing application designed to streamline the billing process.
 - It features a user-friendly login interface and various functionalities to manage billing efficiently.
 
+<!------------------------------------------------->
+
+## Features 🌟
+- User authentication (login/register)
+- Home screen dashboard
+- Bill creation and management
+- PDF bill generation for printouts
+- MongoDB integration for data storage
+
+<!------------------------------------------------->
+
+## Prerequisites 📋
+Before you begin, ensure you have met the following requirements:
+- Python 3.7+
+- pip (Python package manager)
+- MongoDB (local installation or Atlas account)
+
+<!------------------------------------------------->
+
+## Installation 🛠️
+
+1. Clone the repository:
+   
+     ```sh
+     git clone https://github.com/abhinavkumar2369/Bill-Master.git
+     cd Bill-Master
+     ```
+
+2. Install the required dependencies:
+   ```sh
+   pip install pymongo pillow bcrypt
+   ```
+
+<!------------------------------------------------->
+
+
+## MongoDB Setup 🍃
+
+### Option 1: Local MongoDB Installation
+- Download and install MongoDB Community Edition from the official website.
+- Start the MongoDB service.
+- Update the connection string in the application to use mongodb://localhost:27017.
+
+### Option 2: MongoDB Atlas (Cloud)
+- Create a free account on MongoDB Atlas.
+- Set up a new cluster and obtain the connection string.
+- Replace the placeholder connection string in the application with your Atlas connection string.
 
 
 <!------------------------------------------------->
 
+
+## Configuration ⚙️
+
+- Update the connection string in main.py
+
+  ```py
+  mongo_uri = "mongodb+srv://<username>:<password>@<cluster-address>/<dbname>?<options>"
+  ```
+  
+- If using MongoDB Atlas, make sure to whitelist your IP address in the Atlas dashboard.
+
+
+<!------------------------------------------------->
+
+
+### Running the Application 🚀
+- Run the main application file:
+     ```python
+     python main.py
+     ```
+
+<!------------------------------------------------->
 
 
 ## Screenshot 🖼️
