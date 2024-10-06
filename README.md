@@ -144,6 +144,9 @@ Before you begin, ensure you have met the following requirements:
 ### ➡️ HomeScreen
 ![HomeScreen](https://github.com/user-attachments/assets/07d70219-c92c-496d-b4ec-e02666d374c7)
 
+### ➡️ Adding Bills
+![Adding Bills](https://github.com/user-attachments/assets/543899eb-6336-481e-847f-4147b033d032)
+
 ### ➡️ View Bills
 ![View Bills](https://github.com/user-attachments/assets/a7f9f55c-2335-4568-aa85-a1332d7c6a00)
 
@@ -152,6 +155,7 @@ Before you begin, ensure you have met the following requirements:
 
 ### ➡️ MongoDB Database Integration
 ![Mongo Db ](https://github.com/user-attachments/assets/47cdf9c8-43ae-43da-b7c6-0432a019474f)
+
 
 <br/>
 
