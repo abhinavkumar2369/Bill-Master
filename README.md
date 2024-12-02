@@ -132,6 +132,15 @@ Before you begin, ensure you have met the following requirements:
 
 <!------------------------------------------------->
 
+## UML Diagram 🎨
+![UML Diagram](https://github.com/user-attachments/assets/25033cab-9bcb-4111-a9fc-0b76959ddbf6)
+
+<!------------------------------------------------->
+
+## Demonstration Video 📽️
+[![Watch the video](https://github.com/user-attachments/assets/aad55736-ef21-48d8-8640-522cae3c43ac)](https://github.com/user-attachments/assets/07201489-ef59-47a2-bbd5-42a5d9a895f9)
+
+<br/>
 
 ## Screenshot 🖼️
 
@@ -156,11 +165,6 @@ Before you begin, ensure you have met the following requirements:
 ### ➡️ MongoDB Database Integration
 ![Mongo Db ](https://github.com/user-attachments/assets/47cdf9c8-43ae-43da-b7c6-0432a019474f)
 
-
-<br/>
-
-## Demonstration Video 📽️
-[![Watch the video](https://github.com/user-attachments/assets/aad55736-ef21-48d8-8640-522cae3c43ac)](https://github.com/user-attachments/assets/07201489-ef59-47a2-bbd5-42a5d9a895f9)
 
 
 <!------------------------------------------------->
